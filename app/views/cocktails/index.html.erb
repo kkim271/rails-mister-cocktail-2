@@ -13,9 +13,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-12 col-md-6 col-lg-4 columns">
         <div class="cocktail-card">
-          <div>
-            <%= link_to cocktail.name, cocktail_path(cocktail), class:"cocktail-link" %>
-          </div>
+          <%= link_to cocktail.name, cocktail_path(cocktail), class:"cocktail-link" %>
           <div class="trash-can">
             <%= link_to fa_icon("trash"), cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-link" %>
           </div>
