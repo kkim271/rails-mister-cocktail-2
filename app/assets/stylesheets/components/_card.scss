@@ -7,23 +7,35 @@
   position: relative;
 }
 
-.card-name {
+.trash-can {
+  display: none
+}
+
+.cocktail-card:hover .trash-can {
+  display: block;
+}
+
+.delete-link {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: 12px;
+  top: 4px;
+  font-size: 24px;
+}
+
+.cocktail-link {
   display: inline-block;
-  background-color: #397637;
+  background-color: #28BFA6;
   position: absolute;
   left: 16px;
   top: -16px;
   padding: 4px 8px;
-
-}
-
-.card-delete {
-
-}
-
-.cocktail-link {
-  font-family: "IBM Plex Serif";
-  font-weight: 600;
+  z-index: 10;
+  font-family: "Overpass";
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
   text-decoration: none;
   color: black;
 }

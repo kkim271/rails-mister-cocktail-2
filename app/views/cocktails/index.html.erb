@@ -1,12 +1,11 @@
 <div class="navbar">
-  <ul class="nav-objects">
-    <li>
-      <%= image_tag 'logo.svg', class:"logo" %>
-    </li>
-    <li>
-      <%= link_to "New cocktail", new_cocktail_path, class:"new-cocktail" %>
-    </li>
-  </ul>
+  <div class="left-side"></div>
+  <div class="center-side">
+    <%= image_tag 'logo.svg', class:"logo" %>
+  </div>
+  <div class="right-side">
+    <%= link_to "Add cocktail", new_cocktail_path, class:"new-cocktail" %>
+  </div>
 </div>
 
 <div class="main-body">
@@ -14,11 +13,11 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-12 col-md-6 col-lg-4 columns">
         <div class="cocktail-card">
-          <div class="card-name">
+          <div>
             <%= link_to cocktail.name, cocktail_path(cocktail), class:"cocktail-link" %>
           </div>
-          <div class="card-delete">
-            <%= link_to "Delete", cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-link" %>
+          <div class="trash-can">
+            <%= link_to fa_icon("trash"), cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-link" %>
           </div>
         </div>
       </div>
