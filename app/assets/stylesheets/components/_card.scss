@@ -4,12 +4,26 @@
   background-color: black;
   color: white;
   margin-top: 80px;
+  position: relative;
 }
 
 .card-name {
+  display: inline-block;
   background-color: #397637;
+  position: absolute;
+  left: 16px;
+  top: -16px;
+  padding: 4px 8px;
+
 }
 
 .card-delete {
 
+}
+
+.cocktail-link {
+  font-family: "IBM Plex Serif";
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
 }

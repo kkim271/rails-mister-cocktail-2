@@ -4,15 +4,35 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9999;
   display: flex;
   justify-content: space-around;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
 }
 
 .nav-objects {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100vw;
+}
+
+.new-cocktail {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  font-weight: 600;
+  &:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8)
+  }
 }
 
 

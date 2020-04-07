@@ -14,13 +14,6 @@
   </head>
 
   <body>
-    <div class="navbar">
-      <ul class="nav-objects">
-        <li>
-          <%= image_tag 'logo.svg', style: 'height:24px;width:auto;' %>
-        </li>
-      </ul>
-    </div>
     <%= yield %>
     <%= javascript_pack_tag "application" %>
     <%= stylesheet_pack_tag "application" %>
