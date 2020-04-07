@@ -1,17 +1,18 @@
 .show-body {
   display: flex;
   margin: 48px auto auto auto;
-  width: 75%;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
 }
 
 .show-left {
   height: 640px;
+  padding-right: 24px;
 }
 
 .show-right {
   height: 640px;
+  padding-left: 24px;
 }
 
 .back-button {

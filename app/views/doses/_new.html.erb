@@ -1,6 +1,7 @@
-<h2>Add new ingredient</h2>
-<%= simple_form_for [cocktail, dose] do |f| %>
-  <%= f.association :ingredient %>
-  <%= f.text_field :description, placeholder: "Description" %>
-  <%= f.submit %>
-<% end %>
+<div class="popup-form">
+  <%= simple_form_for [cocktail, dose], html: { class: "new-dose-form" }  do |f| %>
+    <%= f.association :ingredient, label: false, prompt: 'Select ingredient' %>
+    <%= f.text_field :description, placeholder: "Amount" %><br>
+    <%= f.submit "Add ingredient"%>
+  <% end %>
+</div>
