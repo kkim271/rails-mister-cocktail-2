@@ -2,17 +2,17 @@
   display: flex;
   margin: 48px auto auto auto;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .show-left {
-  height: 640px;
   padding-right: 24px;
 }
 
 .show-right {
-  height: 640px;
-  padding-left: 24px;
+  padding: 24px;
+  background-color: white;
+  width: 240px;
 }
 
 .back-button {
@@ -24,3 +24,22 @@
 .back-button-icon {
   color: rgb(150, 150, 150)
 }
+
+.dose-line {
+  display: flex;
+  align-items: center;
+}
+
+.dose-description {
+  margin-left: 8px;
+}
+
+.dose-trash {
+  color: rgba(0, 0, 0, 0.33);
+  transition: 0.3s;
+  &:hover {
+    color: #D7263D;
+    transition: 0.3s;
+  }
+}
+

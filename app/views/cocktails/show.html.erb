@@ -20,14 +20,17 @@
     </div>
   </div>
   <div class="show-right">
+    <h6>ingredients</h6>
     <% @cocktail.doses.each do |dose| %>
-      <%= dose.ingredient.name %>
-      (<%= dose.description %>)
-      <%= link_to "Delete", dose, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <br>
-    <% end %><br>
-
-    <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+      <div class="dose-line">
+        <div class="remove-dose">
+          <%= link_to fa_icon("times"), dose, method: :delete, data: { confirm: 'Are you sure?' }, class:"dose-trash" %>
+        </div>
+        <p class="dose-description"><%= dose.ingredient.name + " (" + dose.description + ")" %></p>
+      </div>
+    <% end %>
+    <br>
+<!--     <%= render "doses/new", cocktail: @cocktail, dose: @dose %> -->
   </div>
 </div>
 
