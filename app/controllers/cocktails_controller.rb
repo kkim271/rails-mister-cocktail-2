@@ -1,5 +1,3 @@
-require 'byebug'
-
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all

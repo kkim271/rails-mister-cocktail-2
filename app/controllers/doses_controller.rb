@@ -1,5 +1,3 @@
-require 'byebug'
-
 class DosesController < ApplicationController
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
