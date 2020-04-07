@@ -1,9 +1,18 @@
-<h1>Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  <%= link_to "Delete", cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="main-body">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-4 columns">
+        <div class="cocktail-card">
+          <div class="card-name">
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          </div>
+          <div class="card-delete">
+            <%= link_to "Delete", cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <br>
-<% end %>
-
-<br>
-<%= link_to "New cocktail", new_cocktail_path %>
+  <%= link_to "New cocktail", new_cocktail_path %>
+</div>
