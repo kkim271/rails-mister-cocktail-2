@@ -1,6 +1,15 @@
-<h1>New cocktail</h1>
+<div class="navbar">
+  <div class="left-side"></div>
+  <div class="center-side">
+    <%= link_to image_tag('logo.svg', class:"logo"), cocktails_path %>
+  </div>
+  <div class="right-side">
+    <%= link_to "Add cocktail", new_cocktail_path, class:"new-cocktail" %>
+  </div>
+</div>
 
 <%= form_for @cocktail do |f| %>
   <%= f.text_field :name %>
   <%= f.submit %>
 <% end %>
+

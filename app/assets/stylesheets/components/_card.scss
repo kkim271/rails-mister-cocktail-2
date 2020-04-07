@@ -7,6 +7,14 @@
   position: relative;
 }
 
+.cocktail-card-show {
+  height: 320px;
+  width: 440px;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
 .trash-can {
   display: none
 }
@@ -26,3 +34,25 @@
   }
 }
 
+.cocktail-link {
+  display: inline-block;
+  background-color: #28BFA6;
+  position: absolute;
+  left: 16px;
+  top: -16px;
+  padding: 4px 8px;
+  z-index: 10;
+  font-family: "Overpass";
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: black;
+  transition: 0.5s;
+  &:hover {
+    text-decoration: none;
+    background-color: #209B86;
+    color: black;
+    transition: 0.5s;
+  }
+}

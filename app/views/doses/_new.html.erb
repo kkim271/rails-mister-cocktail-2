@@ -1,8 +1,6 @@
-<%=  %>
-
 <h2>Add new ingredient</h2>
 <%= simple_form_for [cocktail, dose] do |f| %>
   <%= f.association :ingredient %>
-  <%= f.text_field :description %>
+  <%= f.text_field :description, placeholder: "Description" %>
   <%= f.submit %>
 <% end %>

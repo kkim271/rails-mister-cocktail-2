@@ -1,7 +1,7 @@
 <div class="navbar">
   <div class="left-side"></div>
   <div class="center-side">
-    <%= image_tag 'logo.svg', class:"logo" %>
+    <%= link_to image_tag('logo.svg', class:"logo"), cocktails_path %>
   </div>
   <div class="right-side">
     <%= link_to "Add cocktail", new_cocktail_path, class:"new-cocktail" %>
