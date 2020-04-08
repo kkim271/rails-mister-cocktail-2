@@ -1,7 +1,7 @@
 <div class="popup-form">
   <%= simple_form_for [cocktail, dose], html: { class: "new-dose-form" }  do |f| %>
-    <%= f.association :ingredient, label: false, prompt: 'Select ingredient' %>
-    <%= f.text_field :description, placeholder: "Amount" %><br>
-    <%= f.submit "Add ingredient"%>
+    <%= f.association :ingredient, label: false, prompt: 'Select ingredient', class:"ingredient-dropdown" %>
+    <%= f.text_field :description, placeholder: "Enter amount", class:"dose-description-input" %><br>
+    <%= f.submit "Add ingredient", class:"add-dose-button" %>
   <% end %>
 </div>

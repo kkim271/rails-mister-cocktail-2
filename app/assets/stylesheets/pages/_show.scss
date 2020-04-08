@@ -12,7 +12,10 @@
 .show-right {
   padding: 24px;
   background-color: white;
-  width: 240px;
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .back-button {
@@ -22,7 +25,13 @@
 }
 
 .back-button-icon {
-  color: rgb(150, 150, 150)
+  color: rgb(120, 120, 120);
+  transition: 0.3s;
+  &:hover {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+    transition: 0.3s;
+  }
 }
 
 .dose-line {
@@ -32,6 +41,7 @@
 
 .dose-description {
   margin-left: 8px;
+  font-size: 16px;
 }
 
 .dose-trash {
@@ -43,3 +53,50 @@
   }
 }
 
+::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #495058;
+}
+
+.element::-moz-placeholder {
+  font-size: 16px;
+  color: #495058;
+}
+
+.dose-description-input {
+  height: 36px;
+  font-size: 16px;
+  width: 100%;
+  padding: 8px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #CED4DB;
+  margin-top: -10px;
+}
+
+.add-dose-button {
+  margin-top: 10px;
+  height: 32px;
+  width: 100%;
+  background-color: #10181C;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: white;
+  font-weight: 600;
+  border: none;
+  &:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
+  }
+}
+
+.ingredient-list {
+  width: 100%;
+}
+
+.new-dose {
+  width: 100%;
+}
