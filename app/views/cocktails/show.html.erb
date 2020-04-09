@@ -31,6 +31,11 @@
         </div>
       <% end %>
     </div>
+
+    <div class="image-upload-form">
+      <%= render "cocktails/form", cocktail: @cocktail %>
+    </div>
+
     <div class="new-dose">
       <h6 class="add-new-ingredient-text">add new ingredient</h6>
       <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
