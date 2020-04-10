@@ -17,7 +17,7 @@
   display: none
 }
 
-.cocktail-card:hover .trash-can {
+.card-category:hover .trash-can {
   display: block;
 }
 
@@ -53,4 +53,10 @@
     color: black;
     transition: 0.5s;
   }
+}
+
+.cocktail-card-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }

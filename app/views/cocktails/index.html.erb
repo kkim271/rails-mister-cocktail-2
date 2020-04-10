@@ -20,8 +20,9 @@
         <% end %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path background_url, crop: :fill %>')">
           <%= link_to cocktail.name, cocktail_path(cocktail), class:"cocktail-link" %>
+          <%= link_to "", cocktail_path(cocktail), class:"cocktail-card-link" %>
           <div class="trash-can">
-            <%= link_to fa_icon("trash"), cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-link" %>
+            <%= link_to fa_icon("trash"), cocktail, method: :delete, data: { confirm: 'Are you sure you want to delete this cocktail?' }, class:"delete-link" %>
           </div>
         </div>
       </div>
