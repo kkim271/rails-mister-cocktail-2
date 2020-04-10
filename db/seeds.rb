@@ -9,6 +9,8 @@
 require 'open-uri'
 require 'json'
 
+image_file = URI.open('https://images.unsplash.com/photo-1563630440878-c25af103219a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 ingredients = JSON.parse(open(url).read)
 
@@ -17,6 +19,7 @@ ingredients["drinks"].each do |ingredient|
 end
 
 new_cocktail = Cocktail.new(name: "Gin & Tonic")
+new_cocktail.photo.attach(io: image_file, filename: 'gintonic.jpeg', content_type: 'image/jpeg')
 new_dose = Dose.new(description: "1 shot")
 new_dose.ingredient = Ingredient.find(3)
 new_dose.cocktail = new_cocktail

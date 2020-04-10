@@ -12,6 +12,7 @@
   <%= link_to fa_icon("chevron-left", text: "Back"), cocktails_path, class:"back-button-icon" %>
 </div>
 
+
 <div class="new-cocktail-form">
   <%= form_for @cocktail do |f| %>
     <%= f.text_field :name, placeholder:"Enter the name of your cocktail: ", class:"new-cocktail-name" %>
