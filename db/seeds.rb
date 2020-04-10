@@ -9,7 +9,7 @@
 require 'open-uri'
 require 'json'
 
-image_file = URI.open('https://images.unsplash.com/photo-1563630440878-c25af103219a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+image_file = URI.open('https://images.unsplash.com/photo-1574068929209-e42913591709?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 ingredients = JSON.parse(open(url).read)
