@@ -18,12 +18,14 @@
       <%= f.text_field :name, placeholder:"Name", class:"new-cocktail-name" %>
       <br>
       <br>
-      <br>
-      <h6>photo</h6>
-      <div class="blank-gray">
-        <p>&nbsp;</p>
-      </div>
+      <h6 id="photo-label">photo</h6>
       <%= f.input :photo, as: :file %>
+      <script type="text/javascript">
+        removePhotoLabel();
+        function removePhotoLabel() {
+          document.querySelector("#new_cocktail > div.form-group.file.optional.cocktail_photo > label").innerText = "";
+        };
+      </script>
       <%= f.submit "Create", class:"submit-button" %>
     <% end %>
   </div>
