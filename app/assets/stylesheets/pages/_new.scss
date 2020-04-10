@@ -1,8 +1,25 @@
 .new-cocktail-form {
   margin-top: 16px;
   text-align: center;
+  position: relative;
+  h6 {
+    text-align: left;
+  }
 }
 
 .new-cocktail-name {
-  width: 320px;
+  width: 100%;
+}
+
+.blank-gray {
+  width: 50%;
+  background-color: rgb(220, 220, 220);
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  height: 15%;
+}
+
+.form-group.file {
+  margin-top: -32px;
 }

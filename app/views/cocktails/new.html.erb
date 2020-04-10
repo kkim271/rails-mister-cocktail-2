@@ -4,7 +4,6 @@
     <%= link_to image_tag('logo.svg', class:"logo"), cocktails_path %>
   </div>
   <div class="right-side">
-    <%= link_to "Add cocktail", new_cocktail_path, class:"new-cocktail" %>
   </div>
 </div>
 
@@ -12,10 +11,20 @@
   <%= link_to fa_icon("chevron-left", text: "Back"), cocktails_path, class:"back-button-icon" %>
 </div>
 
-
-<div class="new-cocktail-form">
-  <%= simple_form_for @cocktail do |f| %>
-    <%= f.text_field :name, placeholder:"Enter the name of your cocktail: ", class:"new-cocktail-name" %>
-    <%= f.submit "Create" %>
-  <% end %>
+<div class="show-body">
+  <div class="new-cocktail-form">
+    <%= simple_form_for @cocktail do |f| %>
+      <h6>new cocktail</h6>
+      <%= f.text_field :name, placeholder:"Name", class:"new-cocktail-name" %>
+      <br>
+      <br>
+      <br>
+      <h6>photo</h6>
+      <div class="blank-gray">
+        <p>&nbsp;</p>
+      </div>
+      <%= f.input :photo, as: :file, class:"photo-uploader" %>
+      <%= f.submit "Create", class:"submit-button" %>
+    <% end %>
+  </div>
 </div>
